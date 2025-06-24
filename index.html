@@ -1,0 +1,238 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Developer Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(135deg, #1a2a6c, #b21f1f, #1a2a6c);
+            background-size: 400% 400%;
+            animation: gradientBG 15s ease infinite;
+            color: #333;
+            min-height: 100vh;
+        }
+        
+        @keyframes gradientBG {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+        
+        .profile-img {
+            border-radius: 50%;
+            border: 5px solid rgba(255, 255, 255, 0.8);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .profile-img:hover {
+            transform: scale(1.05);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+        }
+        
+        .card {
+            background: rgba(255, 255, 255, 0.92);
+            border-radius: 20px;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+            backdrop-filter: blur(10px);
+            transition: transform 0.3s ease;
+        }
+        
+        .card:hover {
+            transform: translateY(-10px);
+        }
+        
+        .progress-bar {
+            height: 12px;
+            border-radius: 10px;
+            position: relative;
+            overflow: hidden;
+            background: #e0e0e0;
+        }
+        
+        .progress-fill {
+            height: 100%;
+            border-radius: 10px;
+            position: absolute;
+            left: 0;
+            top: 0;
+            transition: width 1.5s ease-in-out;
+        }
+        
+        .skill-badge {
+            display: inline-block;
+            padding: 6px 15px;
+            border-radius: 20px;
+            font-size: 14px;
+            font-weight: 600;
+            margin: 5px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        
+        .social-link {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 45px;
+            height: 45px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.8);
+            color: #1a2a6c;
+            transition: all 0.3s ease;
+            font-size: 20px;
+        }
+        
+        .social-link:hover {
+            transform: translateY(-5px);
+            background: #1a2a6c;
+            color: white;
+        }
+        
+        .floating {
+            animation: floating 3s ease-in-out infinite;
+        }
+        
+        @keyframes floating {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-15px); }
+            100% { transform: translateY(0px); }
+        }
+    </style>
+</head>
+<body>
+  <body class="py-8 px-4">
+    <div class="max-w-4xl mx-auto">
+        <!-- Header -->
+        <header class="text-center mb-12">
+            <h1 class="text-4xl md:text-5xl font-bold text-white mb-2">Okesola Francis Ayomide</h1>
+            <h2 class="text-xl md:text-2xl text-white opacity-90">Frontend Web Developer</h2>
+            <div class="flex justify-center space-x-4 mt-6">
+                <a href="https://github.com/Francis544x/portfolio.git" class="social-link"><i class="fab fa-github"></i></a>
+                <a href="http://linkedin.com/in/okesola-francis-342b192a6" class="social-link"><i class="fab fa-linkedin-in"></i></a>
+                <a href="https://codepen.io/Okesola-Francis" class="social-link"><i class="fab fa-codepen"></i></a>
+            </div>
+        </header>
+
+        <main>
+            <!-- Profile Section -->
+            <div class="card p-6 mb-10">
+                <div class="flex flex-col md:flex-row items-center">
+                    <div class="md:w-1/3 flex justify-center mb-6 md:mb-0">
+                        <img src="assets/images/WhatsApp Image 2025-06-24 at 05.32.45_38e94c3d.jpg" 
+                             alt="Developer Photo" 
+                             class="profile-img w-48 h-48 object-cover floating">
+                    </div>
+                    <div class="md:w-2/3 md:pl-8">
+                        <h3 class="text-2xl font-bold text-gray-800 mb-4">About Me</h3>
+                        <p class="text-gray-700 mb-4">
+                            Hello! I'm Francis, a passionate frontend developer with a strong foundation in HTML, CSS, and JavaScript. I specialize in creating responsive, user-friendly web interfaces that deliver exceptional user experiences.
+                        </p>
+                        <p class="text-gray-700 mb-4">
+                            With a background in design and a love for clean code, I bridge the gap between aesthetics and functionality. I'm constantly learning new technologies and techniques to improve my craft.
+                        </p>
+                        <div class="flex flex-wrap mt-6">
+                            <span class="skill-badge bg-blue-100 text-blue-800">Responsive Design</span>
+                            <span class="skill-badge bg-purple-100 text-purple-800">Problem Solver</span>
+                            <span class="skill-badge bg-yellow-100 text-yellow-800">Quick Learner</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Skills Section -->
+            <div class="card p-6">
+                <h3 class="text-2xl font-bold text-gray-800 mb-6 text-center">Technical Skills</h3>
+                
+                <div class="space-y-8">
+                    <!-- HTML Progress -->
+                    <div>
+                        <div class="flex justify-between mb-2">
+                            <span class="font-medium text-gray-700">
+                                <i class="fab fa-html5 text-orange-600 mr-2"></i>HTML</span>
+                            <span class="font-bold text-orange-600">90%</span>
+                        </div>
+                        <div class="progress-bar">
+                            <div class="progress-fill bg-orange-500" style="width: 90%"></div>
+                        </div>
+                    </div>
+                    
+                    <!-- CSS Progress -->
+                    <div>
+                        <div class="flex justify-between mb-2">
+                            <span class="font-medium text-gray-700">
+                                <i class="fab fa-css3-alt text-blue-600 mr-2"></i>CSS</span>
+                            <span class="font-bold text-blue-600">80%</span>
+                        </div>
+                        <div class="progress-bar">
+                            <div class="progress-fill bg-blue-500" style="width: 80%"></div>
+                        </div>
+                    </div>
+                    
+                    <!-- Tailwind Progress -->
+                    <div>
+                        <div class="flex justify-between mb-2">
+                            <span class="font-medium text-gray-700">
+                                <i class="fas fa-wind text-teal-600 mr-2"></i>Tailwind CSS</span>
+                            <span class="font-bold text-teal-600">60%</span>
+                        </div>
+                        <div class="progress-bar">
+                            <div class="progress-fill bg-teal-500" style="width: 60%"></div>
+                        </div>
+                    </div>
+                    
+                    <!-- JavaScript Progress -->
+                    <div>
+                        <div class="flex justify-between mb-2">
+                            <span class="font-medium text-gray-700">
+                                <i class="fab fa-js-square text-yellow-500 mr-2"></i>JavaScript</span>
+                            <span class="font-bold text-yellow-600">30%</span>
+                        </div>
+                        <div class="progress-bar">
+                            <div class="progress-fill bg-yellow-500" style="width: 30%"></div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Call to Action -->
+                <div class="mt-10 text-center">
+                    <a href="mailto:francisokesola@gmail.com" class="inline-block bg-gradient-to-r from-blue-600 to-purple-600 text-white font-bold py-3 px-8 rounded-full shadow-lg hover:shadow-xl transform hover:-translate-y-1 transition duration-300">
+                    Get In Touch
+                    </a>
+                </div>
+            </div>
+        </main>
+
+        <!-- Footer -->
+        <footer class="mt-12 text-center text-white opacity-80">
+            <p>© 2023 Francis Developer. All rights reserved.</p>
+        </footer>
+    </div>
+
+    <script>
+        // Animate progress bars on page load
+        document.addEventListener('DOMContentLoaded', function() {
+            const progressBars = document.querySelectorAll('.progress-fill');
+            
+            // Reset widths for animation
+            progressBars.forEach(bar => {
+                const width = bar.style.width;
+                bar.style.width = '0';
+                
+                // Animate after a short delay
+                setTimeout(() => {
+                    bar.style.width = width;
+                }, 300);
+            });
+        });
+    </script>
+
+
+
+</body>
+</html>
